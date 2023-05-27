@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>After 10th</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+
+TemplateMo 573 EduWell
+
+https://templatemo.com/tm-573-eduwell
+
+-->
+<style>
+    input{
+    width: 85%;
+    height: 30%;
+    margin: 2px;
+    padding: 7px;
+    border-radius: 2px;
+    color: #545c5c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+    
+}
+input:focus{
+    
+    border-color: #3bbedb;
+    outline: 0;
+    box-shadow: none;
+}
+body{
+    text-align: -webkit-center;
+}
+.container1{
+    /* margin-left: 150px; */
+    width: 50%;
+    height: 10%;
+    color: #8f9bad;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+}
+.container1:focus{
+     border-color: #3bbedb;
+    outline: 0;
+    box-shadow: none;
+}
+#countdown{
+    margin: 7px;
+    padding: 8px;
+   background-color:#dc8cdb;
+    color: white;
+    border-radius: 30px;
+    width: 120px;
+    color: #fff;
+    padding: 9.5px 36px;
+  //  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+    /* background-image: linear-gradient(315deg, #6e72fc 0%, #3bbedb 74%); */
+    background-size: 200% auto;
+}
+.btn{
+    width: 65%;
+    padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    color: #fff;
+    padding: 9.5px 36px;
+  //  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+    /* background-color: #6e72fc;
+    background-image: linear-gradient(315deg, #6e72fc 0%, #3bbedb 74%); */
+    background-size: 200% auto;
+}
+
+textarea{
+    color: #8f9bad;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+}
+textarea:focus{
+    border-color: #3bbedb;
+    outline: 0;
+    box-shadow: none;
+}
+h1{
+    color: black;
+}
+label{
+    color: rgb(83, 81, 81);
+}
+</style>
+  </head>
+  <body>
+
+    <br>
+    <div class="">
+        <div class="container1 m-5">
+            <h1 class="m-5">Career Test</h1>
+            <form  action="connect.php" method="post" class="myform">
+                <div class="form-item">Submit the Test In 10 Minutes otherwise you can't submit the test. </div>
+                <div class="form-row">
+                    <br><label class="name">Name:</label>
+                    <input type="text" name="myname" id="name" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="email">Email:</label>
+                    <input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="email">What books do you like to read?</label>
+                    <input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="email">What are your best/worst subjects at school</label>
+                    <input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="email">What job or career would you like in the future?</label>
+                    <input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="email">What are your interests? </label>
+                    <input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br><label class="email">What kinds of information do you search for on the internet?</label><input type="text" name="myemail" inputmode="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <br> <label class="about">About Yourself:</label> <textarea name="about" class="yourself" id="about"
+                        cols="35" rows="0" required></textarea>
+                </div>
+                <br><button onclick="validcap()" class="btn btn-warning btn-lg ms-2" style="background-color:#dc8cdb;">Submit</button>
+            </form>
+            <p class="text-center" id="countdown">10:00</p>
+        </div>
+    </div>
+    
+   <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+      function cap() {
+    var alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V'
+        , 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+        'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '+'];
+    var a = alpha[Math.floor(Math.random() * 71)];
+    var b = alpha[Math.floor(Math.random() * 71)];
+    var c = alpha[Math.floor(Math.random() * 71)];
+    var d = alpha[Math.floor(Math.random() * 71)];
+    var e = alpha[Math.floor(Math.random() * 71)];
+    var f = alpha[Math.floor(Math.random() * 71)];
+
+    var final = a + b + c + d + e + f;
+    document.getElementById("capt").value = final;
+}
+function validcap() {
+    var stg1 = document.getElementById('capt').value;
+    var stg2 = document.getElementById('textinput').value;
+    if (stg1 == stg2) {
+        alert("Form is Submitted Succesfully");
+        return true;
+    }
+    else {
+        alert("Please Enter Valid Captcha");
+        return false;
+    }
+
+}
+
+(function(endTime){
+    endTime*=1000; 
+    endTime+=new Date().getTime();
+    
+    (function timerSync() {
+       
+        var diff = new Date(endTime - new Date().getTime());
+       
+        var timer=document.getElementById('countdown');
+    
+        if(diff<=0)return timerEnd(timer);
+        
+        timer.innerHTML = 
+        	doubleDigits(diff.getUTCHours())
+        	+ ':' +
+        	doubleDigits(diff.getUTCMinutes())
+            + ':' +
+        	doubleDigits(diff.getUTCSeconds())
+        ;
+        // recursion
+        setTimeout(timerSync,1000);
+    })();
+	function timerEnd(timer) {
+        timer.innerHTML='Timer has stopped now';
+    }
+   
+    function doubleDigits(number) {
+    	return number<10
+        	? '0'+number
+        	: number
+        ;
+    } 
+})(
+    (0 * 0)+ (10 * 60) + (00)
+);
+      //according to loftblog tut
+      $('.nav li:first').addClass('active');
+
+      var showSection = function showSection(section, isAnimate) {
+        var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $('body, html').animate({
+            scrollTop: reqSectionPos },
+          800);
+        } else {
+          $('body, html').scrollTop(reqSectionPos);
+        }
+
+      };
+
+      var checkSection = function checkSection() {
+        $('.section').each(function () {
+          var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+            reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+          }
+        });
+      };
+
+      $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        e.preventDefault();
+        showSection($(this).attr('href'), true);
+      });
+
+      $(window).scroll(function () {
+        checkSection();
+      });
+  </script>
+</body>
+
+</html>
